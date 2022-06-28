@@ -9,15 +9,19 @@
   ],
   "description": "provide sub versions of .head|skip|tail",
   "license": "Artistic-2.0",
-  "name": "head::skip::tail",
+  "name": "head-skip-tail",
   "perl": "6.d",
   "provides": {
     "head-skip-tail": "lib/head-skip-tail.rakumod"
   },
   "resources": [
   ],
-  "source-url": "",
-  "tags": [ "HEAD", "SKIP", "TAIL", "CORE"
+  "source-url": "https://github.com/lizmat/head-skip-tail.git",
+  "tags": [
+    "HEAD",
+    "SKIP",
+    "TAIL",
+    "CORE"
   ],
   "test-depends": [
   ],
