@@ -1,0 +1,25 @@
+{
+  "auth": "zef:lizmat",
+  "authors": [
+    "Elizabeth Mattijsen"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "provide sub versions of .head|skip|tail",
+  "license": "Artistic-2.0",
+  "name": "head::skip::tail",
+  "perl": "6.d",
+  "provides": {
+    "head-skip-tail": "lib/head-skip-tail.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "",
+  "tags": [ "HEAD", "SKIP", "TAIL", "CORE"
+  ],
+  "test-depends": [
+  ],
+  "version": "0.0.1"
+}

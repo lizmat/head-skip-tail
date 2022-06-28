@@ -1,0 +1,22 @@
+# Test's "skip" interferes with the "skip" exported by head-skip-tail
+BEGIN my (&plan, &ok, &is, &is-deeply) = do {
+    use Test;
+    (&plan, &ok, &is, &is-deeply)
+}
+
+use head-skip-tail;
+
+plan 6;
+
+my @a = ^10;
+
+is-deeply head(4,   @a), (0,1,2,3),     'does head(4) work';
+is-deeply head(*-4, @a), (0,1,2,3,4,5), 'does head(*-4) work';
+
+is-deeply skip(4,   @a), (4,5,6,7,8,9), 'does skip(4) work';
+is-deeply skip(*-4, @a), (6,7,8,9),     'does skip(*-4) work';
+
+is-deeply tail(4,   @a), (6,7,8,9),     'does tail(4) work';
+is-deeply tail(*-4, @a), (4,5,6,7,8,9), 'does tail(*-4) work';
+
+# vim: expandtab shiftwidth=4
