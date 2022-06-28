@@ -25,6 +25,16 @@ head-skip-tail - provide sub versions of .head|skip|tail
 
 use head-skip-tail;
 
+my @a = ^10;
+say head(  4, @a);  # (0 1 2 3)
+say head(*-4, @a);  # (0 1 2 3 4 5)
+
+say skip(  4, @a);  # (4 5 6 7 8 9)
+say skip(*-4, @a);  # (6 7 8 9)
+
+say tail(  4, @a);  # (6 7 8 9)
+say tail(*-4, @a);  # (4 5 6 7 8 9)
+
 =end code
 
 =head1 DESCRIPTION
